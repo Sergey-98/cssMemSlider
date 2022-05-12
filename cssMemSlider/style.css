@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    margin: 0 auto;
+    background: url(./assets/img/background-.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-position: center top;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
