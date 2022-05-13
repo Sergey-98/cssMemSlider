@@ -10,40 +10,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class = "header-container">
-        <div class = "container header">
-
+    <div class = "wrapper">
+        <input type = "radio" name = "count" id = "first-slide" class = "one" checked>
+        <input type = "radio" name = "count" id = "second-slide" class = "two">
+        <input type = "radio" name = "count" id = "third-slide" class = "three">
+        <input type = "radio" name = "count" id = "fourth-slide" class = "four">
+        
+        <div class = "slider">
+            <div class = "slide slide-one"></div>
+            <div class = "slide slide-two"></div>
+            <div class = "slide slide-three"></div>
+            <div class = "slide slide-four"></div>
         </div>
-    </header>
-    <main class = "main-container">
-        <div class = "container main">
-            <div class = "input-panel">
-                <input type = "radio" name = "count" id = "first-slide" checked>
-                <input type = "radio" name = "count" id = "second-slide">
-                <input type = "radio" name = "count" id = "third-slide">
-                <input type = "radio" name = "count" id = "fourth-slide">
-                <input type = "radio" name = "count" id = "fifth-slide">
+        <div class = "slider-titles">
+            <div class = "slide-title title-one">
+                <span class = "title">первый слайд</span>
             </div>
-            <div class = "slider">
-                <div class = "slide slide-one"></div>
-                <div class = "slide slide-two"></div>
-                <div class = "slide slide-three"></div>
-                <div class = "slide slide-four"></div>
-                <div class = "slide slide-five"></div>
+            <div class = "slide-title title-two">
+                <span class = "title">второй слайд</span>
             </div>
-            <div class = "controls">
-                <label for = "first-slide"></label>
-                <label for = "second-slide"></label>
-                <label for = "third-slide"></label>
-                <label for = "fourth-slide"></label>
-                <label for = "fifth-slide"></label>
+            <div class = "slide-title title-three">
+                <span class = "title">третий слайд</span>
+            </div>
+            <div class = "slide-title title-four">
+                <span class = "title">четвертый слайд</span>
             </div>
         </div>
-    </main>
-    <footer class  = "footer-container">
-        <div class = "container footer">
-
+        <div class = "controls">
+            <label for = "first-slide"></label>
+            <label for = "second-slide"></label>
+            <label for = "third-slide"></label>
+            <label for = "fourth-slide"></label>
         </div>
-    </footer>
+        
+    </div>
 </body>
 </html>
