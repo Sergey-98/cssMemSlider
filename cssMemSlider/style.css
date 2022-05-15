@@ -8,7 +8,7 @@
 }
 @keyframes text-on {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-80%);
     }
       100% {
         transform: translateX(0%);
@@ -154,7 +154,7 @@ label:hover {
 #fifth-slide:checked ~ .slider > .slide-five {
 	opacity: 1;
 	z-index: 1;
-	animation: slide-on 1.5s;
+	animation: slide-on 1s;
 }
 
 #first-slide:checked ~ .slider-titles > .title-one,
@@ -163,7 +163,7 @@ label:hover {
 #fourth-slide:checked ~ .slider-titles > .title-four,
 #fifth-slide:checked ~ .slider-titles > .title-five {
 	opacity: 1;
-    animation: text-on 1.5s;
+    animation: text-on 1s;
 }
 
 @media screen and (max-width: 768px) {
