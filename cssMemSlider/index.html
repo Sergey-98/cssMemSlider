@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Mem Slider</title>
+    <link rel="icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "wrapper">
+        <input type = "radio" name = "count" id = "first-slide" class = "one" checked>
+        <input type = "radio" name = "count" id = "second-slide" class = "two">
+        <input type = "radio" name = "count" id = "third-slide" class = "three">
+        <input type = "radio" name = "count" id = "fourth-slide" class = "four">
+        <input type = "radio" name = "count" id = "fifth-slide" class = "five">
+        
+        <div class = "slider">
+            <div class = "slide slide-one"></div>
+            <div class = "slide slide-two"></div>
+            <div class = "slide slide-three"></div>
+            <div class = "slide slide-four"></div>
+            <div class = "slide slide-five"></div>
+        </div>
+        <div class = "slider-titles">
+            <div class = "slide-title title-one">
+                <span class = "title">Пишешь код в одиночестве VS Когда кто-то смотрит</span>
+            </div>
+            <div class = "slide-title title-two">
+                <span class = "title">Чужой код на GitHub VS Мой код</span>
+            </div>
+            <div class = "slide-title title-three">
+                <span class = "title">Код, который дописал в 4 утра VS Тот же код, когда его читаешь в 10 утра</span>
+            </div>
+            <div class = "slide-title title-four">
+                <span class = "title">Почему же все таки код работает...</span>
+            </div>
+            <div class = "slide-title title-five">
+                <span class = "title">Минутка мотивации для начинающих</span>
+            </div>
+        </div>
+        <div class = "controls">
+            <label for = "first-slide">
+                <div class = "button button-one"></div>
+            </label>
+            <label for = "second-slide">
+                <div class = "button button-two"></div>
+            </label>
+            <label for = "third-slide">
+                <div class = "button button-three"></div>
+            </label>
+            <label for = "fourth-slide">
+                <div class = "button button-four"></div>
+            </label>
+            <label for = "fifth-slide">
+                <div class = "button button-five"></div>
+            </label>
+        </div>  
+    </div>
+</body>
+</html>
