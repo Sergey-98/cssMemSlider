@@ -1,0 +1,218 @@
+@keyframes slide-on {
+    0% {
+        transform: translateY(-100%);
+    }
+      100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes text-on {
+    0% {
+        transform: translateX(-80%);
+    }
+      100% {
+        transform: translateX(0%);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    margin: 0 auto;
+    background: url(./assets/img/background-.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+.wrapper {
+    border-radius: 5%;
+    width: 90vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 100% 60% 40%;
+    gap: 5%;
+    justify-content: space-between;
+}
+.slider {
+    height: inherit;
+    overflow: hidden;
+    width: inherit;
+    box-shadow: 0 0 5% rgba(0, 0, 0, 0.4);
+    display:  grid;
+    margin: 0 auto;
+    border-radius: 2em;
+}
+.wrapper > input {
+    display: none;
+}
+.slide {
+    height: inherit;
+    width: inherit;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 2em;
+}
+.slide-one {
+    background-image: url(./assets/img/mem1.jpg);
+}
+.slide-two {
+    background-image: url(./assets/img/mem2.jpg);
+}
+.slide-three {
+    background-image: url(./assets/img/mem3.jpg);
+}
+.slide-four {
+    background-image: url(./assets/img/mem4.jpg);
+}
+.slide-five {
+    background-image: url(./assets/img/mem5.jpg);
+}
+.slider-titles {
+    width: 50%;
+    overflow: hidden;
+    display:  grid;
+    color: #adadad;
+    font-family: 'Trebuchet MS';
+    font-size: 1.5em;
+}
+.slide-title {
+    opacity: 0;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transform: translateX(0%);
+}
+.controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1%;
+}
+.wrapper label {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    cursor: pointer;
+    border: 0.2em solid #adadad;
+    background-color: #adadad;;
+	display: block;
+    width: 50%;
+    height: 50%;
+	border-radius: 50%;
+}
+.button:hover {
+    cursor: pointer;
+} 
+label:hover {
+    cursor: pointer;
+}
+.button:hover, 
+#first-slide:checked ~ .controls label:nth-of-type(1) .button,
+#second-slide:checked ~ .controls label:nth-of-type(2) .button,
+#third-slide:checked ~ .controls label:nth-of-type(3) .button,
+#fourth-slide:checked ~ .controls label:nth-of-type(4) .button,
+#fifth-slide:checked ~ .controls label:nth-of-type(5) .button {
+    background: inherit;
+}
+
+#first-slide:checked ~ .controls label:nth-of-type(1):hover .button,
+#second-slide:checked ~ .controls label:nth-of-type(2):hover .button,
+#third-slide:checked ~ .controls label:nth-of-type(3):hover .button,
+#fourth-slide:checked ~ .controls label:nth-of-type(4):hover .button,
+#fifth-slide:checked ~ .controls label:nth-of-type(5):hover .button {
+    background: inherit;
+    border: 0.2em solid #069606;
+}
+
+#first-slide ~ .controls label:nth-of-type(1):hover .button,
+#second-slide ~ .controls label:nth-of-type(2):hover .button,
+#third-slide ~ .controls label:nth-of-type(3):hover .button,
+#fourth-slide ~ .controls label:nth-of-type(4):hover .button,
+#fifth-slide ~ .controls label:nth-of-type(5):hover .button {
+    background: #069606;
+    border: 0.2em solid #069606;
+}
+.slide {
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+    z-index: 0;
+    transform: translateY(-100%);
+    transform: rotate(0deg);
+}
+#first-slide:checked ~ .slider > .slide-one,
+#second-slide:checked ~ .slider > .slide-two,
+#third-slide:checked ~ .slider > .slide-three,
+#fourth-slide:checked ~ .slider > .slide-four,
+#fifth-slide:checked ~ .slider > .slide-five {
+	opacity: 1;
+	z-index: 1;
+	animation: slide-on 1s;
+}
+
+#first-slide:checked ~ .slider-titles > .title-one,
+#second-slide:checked ~ .slider-titles > .title-two,
+#third-slide:checked ~ .slider-titles > .title-three,
+#fourth-slide:checked ~ .slider-titles > .title-four,
+#fifth-slide:checked ~ .slider-titles > .title-five {
+	opacity: 1;
+    animation: text-on 1s;
+}
+
+@media screen and (max-width: 768px) {
+    @keyframes slide-on {
+        0% {
+          transform: rotate(360deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+    }
+    .wrapper {
+        height: 65vh;
+    }
+    .slide {
+        background-size: 100% 100%;
+    }
+    .slider {
+        order: 1;
+    }
+    .slider-titles {
+        order: 3;    
+        width: 100%;
+    }
+    .controls {
+        order: 2;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .wrapper {
+        height: 50vh;
+    }
+    .slide {
+        height: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .wrapper {
+        height: 40vh;
+        gap: 0.5%; 
+    }
+}
+@media screen and (max-width: 370px) {
+    .wrapper {
+        gap: 2%;
+    }
+    .slider-titles {
+        font-size: 1.1em;
+    }
+}
